@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>posix.mkdir(${1:'${2:path}'}, ${3:'${4:mode}'})${5:.addCallback(function() {
+	<string>fs.mkdir(${1:'${2:path}'}, ${3:'${4:mode}'})${5:.addCallback(function() {
 	$0
 \})};
 </string>

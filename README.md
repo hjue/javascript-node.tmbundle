@@ -12,13 +12,13 @@ Important: Change your current grammar to "JavaScript Node" (short cut: Shift+Ct
   * .cb - .addCallback(...)
   * .errb - .addErrback(...)
   * .canb - .addCancalback(...)
-* sys module:
-  * puts - sys.puts('string');
-  * p - sys.p('string');
-  * debug - sys.debug('string');
-  * error - sys.error('string');
-  * exec - sys.exec('command').addCallback(...);
-* posix module:
+* util module:
+  * puts - util.puts('string');
+  * p - util.print('string');
+  * debug - util.debug('string');
+  * error - util.error('string');
+  * exec - util.exec('command').addCallback(...);
+* fs module:
   * cat, mkdir, readdir, rename, rmdir, stat
 
 Others:
@@ -36,6 +36,7 @@ Others:
     osascript -e 'tell app "TextMate" to reload bundles'
 
 Alternately, in TextMate, from your drop down menu, select Bundles -> Bundle Editor -> Reload Bundles.
+Be aware that in TextMate's configuration the path to node is present. Select TextmMate -> Preferences.. -> Advanced -> Shell Variables and change the PATH variable.
 
 ## Credits
 
@@ -43,11 +44,13 @@ The Node.JS TM Bundle is currently authored by Dr Nic Williams. Contributors and
 
 * **Dr Nic** - Author/Main contributor
 * **Jasper Lievisse Adriaanse** - Contributor
+* **Vincent Bruijn** - Contributor
 
 ## License
 
 Copyright (c) 2009-2010 Dr Nic Williams, Mocra
 Copyright (c) 2012 Jasper Lievisse Adriaanse
+Copyright (c) 2012 Vincent Bruijn
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

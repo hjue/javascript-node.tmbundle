@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>posix.rename(${1:'${2:from}'}, ${3:'${4:to}'})${5:.addCallback(function() {
+	<string>fs.rename(${1:'${2:from}'}, ${3:'${4:to}'})${5:.addCallback(function() {
 	$0
 \})};
 </string>

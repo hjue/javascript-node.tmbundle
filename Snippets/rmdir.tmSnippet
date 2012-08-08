@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>posix.rmdir(${1:'${2:path}'})${5:.addCallback(function() {
+	<string>fs.rmdir(${1:'${2:path}'})${5:.addCallback(function() {
 	$0
 \})};
 </string>

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>sys.debug(${1:'${2:hello world}'});</string>
+	<string>util.debug(${1:'${2:hello world}'});</string>
 	<key>name</key>
 	<string>debug</string>
 	<key>scope</key>

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>sys.exec(${1:'${2:ls -al}'})${5:.addCallback(function (stdout, stderr) {
+	<string>util.exec(${1:'${2:ls -al}'})${5:.addCallback(function (stdout, stderr) {
   $0
 \})};</string>
 	<key>name</key>

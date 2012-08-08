@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>sys.error(${1:'${2:ALERT}'});</string>
+	<string>util.error(${1:'${2:ALERT}'});</string>
 	<key>name</key>
 	<string>error</string>
 	<key>scope</key>

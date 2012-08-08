@@ -4,7 +4,7 @@
 <dict>
 	<key>content</key>
 	<string>posix.cat(${1:'${2:path}'}${3:, '${4:utf8}'})${5:.addCallback(function(content) {
-	${10:sys.puts(content);}$0
+	${10:utils.puts(content);}$0
 \})};
 </string>
 	<key>name</key>

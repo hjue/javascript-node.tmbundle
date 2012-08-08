@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>sys.puts(${1:'${2:hello world}'});</string>
+	<string>util.puts(${1:'${2:hello world}'});</string>
 	<key>name</key>
 	<string>puts</string>
 	<key>scope</key>

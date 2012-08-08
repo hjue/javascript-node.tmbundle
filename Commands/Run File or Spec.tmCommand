@@ -9,7 +9,7 @@
 
 // NOTE: This original implementation has support for running node.js/express web application jspec test files. This will be extracted into a separate bundle + command at some stage.
 
-var sys = require("sys");
+var util = require("util");
 if(process.env.TM_FILENAME.match(/(.*)spec\.js/)) {
   require.paths.unshift(process.env.TM_BUNDLE_SUPPORT + '/spec/lib');
   if (typeof process.env.TM_PROJECT_DIRECTORY != "undefined" &amp;&amp; process.env.TM_PROJECT_DIRECTORY != null &amp;&amp; process.env.TM_PROJECT_DIRECTORY != "") {
@@ -34,9 +34,9 @@ if(process.env.TM_FILENAME.match(/(.*)spec\.js/)) {
   };
   
   GLOBAL.console = {
-    log: sys.puts,
-    warn: sys.puts,
-    error: sys.puts,
+    log: util.puts,
+    warn: util.puts,
+    error: util.puts,
     group: function(){},
     groupEnd: function(){}
   };
@@ -48,10 +48,12 @@ if(process.env.TM_FILENAME.match(/(.*)spec\.js/)) {
   var spawn = require('child_process').spawn;
   var script = spawn("node", [process.env.TM_FILEPATH]);
   script.stdout.on("data", function(data) {
-    if (data !== null) { sys.puts(data); }
+    if (data !== null) { util.puts(data); }
   });
   script.stderr.on("data", function(data) {
-    if (data !== null) { sys.puts("ERROR: " + data); }
+    if (/^execvp\(\)/.test(data)) {
+		console.log('Failed to start child process.');
+	} else if (data !== null) { util.puts("ERROR: " + data); }
   });
 }
 </string>

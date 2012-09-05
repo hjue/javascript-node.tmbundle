@@ -24,7 +24,7 @@ Important: Change your current grammar to "JavaScript Node" (short cut: Shift+Ct
 Others:
 
 * app => if (module.id == require.main.id) { .. }
-* cons => console.log('');
+* log => console.log('');
 * fun => function function_name(argument) {	// body...}
 * set => setTimeout(function, n);
 
